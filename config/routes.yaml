@@ -1,0 +1,3 @@
+article_data:
+    path: /
+    controller: App\Controller\DefaultController::data

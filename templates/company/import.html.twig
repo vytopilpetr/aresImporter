@@ -1,0 +1,11 @@
+{% if success is not null %}
+    {% if success %}
+        <div style="color: green;">Import successful for entered ICO!</div>
+    {% else %}
+        <div style="color: red;">Import failed. Please check the entered Company ICO.</div>
+    {% endif %}
+{% endif %}
+
+{{ form_start(form) }}
+    {{ form_row(form.companyId, {'label': 'Company ICO'}) }}
+{{ form_end(form) }}

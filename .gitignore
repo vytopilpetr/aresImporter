@@ -1,0 +1,19 @@
+/.env.local
+/.env.*.local
+/bin/
+/var/
+/vendor/
+/.idea/*
+.idea
+
+###> symfony/phpunit-bridge ###
+.phpunit
+/phpunit.xml
+###< symfony/phpunit-bridge ###
+
+.DS_Store
+/.idea
+.phpunit.result.cache
+
+
+
