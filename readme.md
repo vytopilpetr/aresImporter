@@ -9,27 +9,17 @@ form and company ICO and retrieving information about a company in JSON format t
 - Docker installed on your machine.
 
 ### Steps
-1. Clone the repository:
-```bash
-git clone <repository-url>
-```
-
-2. Navigate to the project directory:
-```bash
-cd aresImporter
-```
-
-3. Build and run the Docker containers:
+1. Build and run the Docker containers:
 ```bash
 docker-compose up --build
 ```
 
-4. Run composer install inside the ares-php container:
+2. Run composer install inside the ares-php container:
 ```bash
 docker exec ares-php composer install
 ```
 
-5. Run migrations:
+3. Run migrations:
 ```bash
 docker exec ares-php bin/console doctrine:migrations:migrate
 ```
