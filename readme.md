@@ -45,8 +45,16 @@ To retrieve information about a company, send a GET request to the API endpoint:
 
 - API Endpoint: http://localhost:8080/rest/api/{companyId}.
 Replace {companyId} with the actual Company ID you want to retrieve.
-Example: http://localhost:8080/rest/api/07385285
+Example: http://localhost:8080/rest/api/27074358
 - To retrieve some data, you first need to import it. You should do the importing of company as mentioned above.
 
 
 ## Running Tests
+Tests are stored in the `tests/` folder. DataFixtures for Functional tests are stored in `src/DataFixtures/`. 
+Dummy xml data from ARES are stored in the `tests/Data/`, these are provided by the `DummyDataFetcher` to avoid 
+dependency on ARES data endpoint in tests.
+
+- Run tests:
+```bash
+docker exec ares-php vendor/bin/phpunit tests
+```
