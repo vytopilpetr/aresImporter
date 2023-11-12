@@ -32,7 +32,7 @@ docker exec ares-php composer install
 
 4. Run migrations:
 ```bash
-docker exec ares-php bin/console doctrine:migrations:migrate
+docker exec ares-php php bin/console doctrine:migrations:migrate
 ```
 
 ## Usage
