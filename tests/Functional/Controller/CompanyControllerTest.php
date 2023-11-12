@@ -105,7 +105,7 @@ class CompanyControllerTest extends WebTestCase
         $this->client->request('POST', '/importCompany', ['company_search' => $formData]);
 
         $this->assertSame(Response::HTTP_OK, $this->client->getResponse()->getStatusCode());
-        $this->assertSelectorTextContains('.ft-fail', 'Import failed. Please check the entered Company ICO.');
+        $this->assertSelectorTextContains('.ft-fail', 'Import failed! Please check the entered Company ICO.');
     }
 
 }
