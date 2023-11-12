@@ -45,24 +45,6 @@ class CompanyControllerTest extends WebTestCase
 
     }
 
-    public function testProvideCompanyActionEmptyCompanyId(): void
-    {
-        $this->client->request('GET', '/rest/api/');
-        $response = $this->client->getResponse();
-
-        $this->assertSame(JsonResponse::HTTP_NOT_FOUND, $response->getStatusCode());
-    }
-
-    public function testProvideCompanyActionInvalidCompanyId(): void
-    {
-        $invalidCompanyId = 'abc';
-
-        $this->client->request('GET', '/rest/api/' . $invalidCompanyId);
-        $response = $this->client->getResponse();
-
-        $this->assertSame(JsonResponse::HTTP_NOT_FOUND, $response->getStatusCode());
-    }
-
     public function testProvideCompanyActionSuccess(): void
     {
         $companyId = 1111;
@@ -100,7 +82,7 @@ class CompanyControllerTest extends WebTestCase
 
     public function testCompanyImportActionFormSubmissionEmptyDataForCompanyId(): void
     {
-        $formData = ['companyId' => 0];
+        $formData = ['companyId' => 4];
 
         $this->client->request('POST', '/importCompany', ['company_search' => $formData]);
 

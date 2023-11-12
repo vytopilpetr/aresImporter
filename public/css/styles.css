@@ -105,6 +105,7 @@ body, button
     width: 100%;
     padding: 10px 0;
     background: none;
+    border: none;
     border-bottom: 1px solid #666;
     color: #ddd;
     font-size: 20px;
@@ -137,11 +138,16 @@ input::-webkit-inner-spin-button {
     text-align: center;
 }
 
-.ft-success {
+.status {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.status.ft-success {
     color: green;
 }
 
-.ft-fail {
+.status.ft-fail {
     color: red;
 }
 

@@ -1,26 +1,24 @@
+<?xml version="1.0"?>
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.4/phpunit.xsd"
-         backupGlobals="false"
-         colors="true"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.4/phpunit.xsd" backupGlobals="false" colors="true"
          bootstrap="vendor/autoload.php">
-
     <php>
-        <ini name="error_reporting" value="-1"/>
+        <ini name="display_errors" value="1"/>
+        <ini name="error_reporting" value="8191"/>
         <env name="SHELL_VERBOSITY" value="-1"/>
-        <env name="KERNEL_CLASS" value="App\Kernel" />
-        <env name="DATABASE_NAME" value="aresdb" />
-        <env name="DATABASE_HOST" value="database" />
-        <env name="DATABASE_PORT" value="3306" />
-        <env name="DATABASE_USER" value="ares" />
-        <env name="DATABASE_PASSWORD" value="ares" />
-        <env name="DATABASE_SERVER_VERSION" value="8.0" />
-        <env name="ARES_URL" value="https://www.test.url" />
+        <env name="KERNEL_CLASS" value="App\Kernel"/>
+        <env name="DATABASE_NAME" value="aresdb"/>
+        <env name="DATABASE_HOST" value="database"/>
+        <env name="DATABASE_PORT" value="3306"/>
+        <env name="DATABASE_USER" value="ares"/>
+        <env name="DATABASE_PASSWORD" value="ares"/>
+        <env name="DATABASE_SERVER_VERSION" value="8.0"/>
+        <env name="ARES_URL" value="https://www.test.url"/>
+        <env name="SYMFONY_DEPRECATIONS_HELPER" value="disabled"/>
     </php>
-
     <testsuites>
         <testsuite name="project_tests">
             <directory>tests</directory>
         </testsuite>
     </testsuites>
-
 </phpunit>
