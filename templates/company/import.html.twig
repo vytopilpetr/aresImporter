@@ -1,11 +1,38 @@
-{% if success is not null %}
-    {% if success %}
-        <div class="ft-success" style="color: green;">Import successful for entered ICO!</div>
-    {% else %}
-        <div class="ft-fail" style="color: red;">Import failed. Please check the entered Company ICO.</div>
-    {% endif %}
-{% endif %}
+<head>
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+</head>
 
-{{ form_start(form) }}
-    {{ form_row(form.companyId, {'label': 'Company ICO'}) }}
-{{ form_end(form) }}
+<body>
+<div class="background">
+    <div class="container">
+        <div class="screen">
+            <div class="screen-header">
+            </div>
+            <div class="screen-body">
+                <div class="screen-body-item left">
+                    <div class="app-title">
+                        <span>COMPANY</span>
+                        <span>IMPORT</span>
+                    </div>
+                </div>
+                <div class="screen-body-item">
+                    {% if success is not null %}
+                        {% if success %}
+                            <div class="ft-success">Import successful for entered ICO!</div>
+                        {% else %}
+                            <div class="ft-fail">Import failed!. Please check the entered Company ICO.</div>
+                        {% endif %}
+                    {% endif %}
+                    <div class="app-form">
+                        <div class="app-form-group">
+                            {{ form_start(form) }}
+                            {{ form_row(form.companyId, {'label': 'Company ICO'}) }}
+                            {{ form_end(form) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>

@@ -15,8 +15,7 @@ class CompanySearchType extends AbstractType
     {
         $builder
             ->add('companyId', IntegerType::class, [
-                'label' => 'Company ICO',
-                'attr' => ['placeholder' => 'Enter Company ICO'],
+                'attr' => ['placeholder' => 'Enter Company ICO', 'class' => 'company-id-input'],
                 'constraints' => [
                     new NotBlank(['message' => 'Please enter a Company ICO.']),
                     new Type([
@@ -27,6 +26,7 @@ class CompanySearchType extends AbstractType
             ])
             ->add('search', SubmitType::class, [
                 'label' => 'Import',
+                'attr' => ['class' => 'company-import-btn'],
             ]);
     }
 }
