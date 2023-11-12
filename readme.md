@@ -9,17 +9,28 @@ form and company ICO and retrieving information about a company in JSON format t
 - Docker installed on your machine.
 
 ### Steps
-1. Build and run the Docker containers:
+1. Build the Docker containers:
 ```bash
-docker-compose up --build
+docker-compose --build
 ```
 
-2. Run composer install inside the ares-php container:
+- Note: If you have a Mac with M1/M2 chip, Docker Compose might throw an error
+
+> no matching manifest for Linux/arm64/v8 in the manifest list entries
+
+In this case, add `platform: linux/amd64` to your **docker-compose.yml** file under the `database` service.
+
+2. Run the Docker containers:
+```bash
+docker docker compose up -d
+```
+
+3. Run composer install inside the ares-php container:
 ```bash
 docker exec ares-php composer install
 ```
 
-3. Run migrations:
+4. Run migrations:
 ```bash
 docker exec ares-php bin/console doctrine:migrations:migrate
 ```
