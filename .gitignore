@@ -1,6 +1,5 @@
 /.env.local
 /.env.*.local
-/bin/
 /var/
 /vendor/
 /.idea/*

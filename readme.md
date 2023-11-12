@@ -11,7 +11,7 @@ form and company ICO and retrieving information about a company in JSON format t
 ### Steps
 1. Build the Docker containers:
 ```bash
-docker-compose --build
+docker compose build
 ```
 
 - Note: If you have a Mac with M1/M2 chip, Docker Compose might throw an error
@@ -22,7 +22,7 @@ In this case, add `platform: linux/amd64` to your **docker-compose.yml** file un
 
 2. Run the Docker containers:
 ```bash
-docker docker compose up -d
+docker compose up -d
 ```
 
 3. Run composer install inside the ares-php container:
@@ -38,7 +38,7 @@ docker exec ares-php bin/console doctrine:migrations:migrate
 ## Usage
 ### Importing a Company
 1. Open your web browser and go to http://localhost:8080/importCompany.
-2. Fill in the Company ICO in the provided form and click the "Import" button.
+2. Fill in the Company ICO(e.g. 27074358) in the provided form and click the "Import" button.
 3. View the import result on the page - if the import was successful or not.
 
 ### Retrieving Company Information through API
